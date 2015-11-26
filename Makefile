@@ -15,9 +15,9 @@
 
 
 
-pkgdatadir = $(datadir)/xprintidle
-pkglibdir = $(libdir)/xprintidle
-pkgincludedir = $(includedir)/xprintidle
+pkgdatadir = $(datadir)/xqueryidle
+pkglibdir = $(libdir)/xqueryidle
+pkgincludedir = $(includedir)/xqueryidle
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -30,7 +30,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = xprintidle$(EXEEXT)
+bin_PROGRAMS = xqueryidle$(EXEEXT)
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(top_srcdir)/configure AUTHORS COPYING \
@@ -46,10 +46,10 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_xprintidle_OBJECTS = xprintidle.$(OBJEXT)
-xprintidle_OBJECTS = $(am_xprintidle_OBJECTS)
-xprintidle_LDADD = $(LDADD)
-xprintidle_DEPENDENCIES =
+am_xqueryidle_OBJECTS = xqueryidle.$(OBJEXT)
+xqueryidle_OBJECTS = $(am_xqueryidle_OBJECTS)
+xqueryidle_LDADD = $(LDADD)
+xqueryidle_DEPENDENCIES =
 DEFAULT_INCLUDES = -I.
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -57,8 +57,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-SOURCES = $(xprintidle_SOURCES)
-DIST_SOURCES = $(xprintidle_SOURCES)
+SOURCES = $(xqueryidle_SOURCES)
+DIST_SOURCES = $(xqueryidle_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -73,71 +73,71 @@ DIST_ARCHIVES = $(distdir).tar.gz $(distdir).tar.bz2 \
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run aclocal-1.10
-AMTAR = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run tar
-AUTOCONF = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run automake-1.10
+ACLOCAL = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run aclocal-1.10
+AMTAR = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run tar
+AUTOCONF = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run automake-1.10
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS =
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"xprintidle\" -DPACKAGE_TARNAME=\"xprintidle\" -DPACKAGE_VERSION=\"0.2\" -DPACKAGE_STRING=\"xprintidle\ 0.2\" -DPACKAGE_BUGREPORT=\"henoch@dtek.chalmers.se\" -DPACKAGE=\"xprintidle\" -DVERSION=\"0.2\" -DHAVE_LIBX11=1 -DHAVE_LIBXSS=1
+DEFS = -DPACKAGE_NAME=\"xqueryidle\" -DPACKAGE_TARNAME=\"xqueryidle\" -DPACKAGE_VERSION=\"0.2\" -DPACKAGE_STRING=\"xqueryidle\ 0.2\" -DPACKAGE_BUGREPORT=\"henoch@dtek.chalmers.se\" -DPACKAGE=\"xqueryidle\" -DVERSION=\"0.2\" -DHAVE_LIBX11=1 -DHAVE_LIBXSS=1
 DEPDIR = .deps
-ECHO_C = 
+ECHO_C =
 ECHO_N = -n
-ECHO_T = 
-EXEEXT = 
+ECHO_T =
+EXEEXT =
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LDFLAGS = 
-LIBOBJS = 
-LIBS = 
-LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/missing --run makeinfo
+LDFLAGS =
+LIBOBJS =
+LIBS =
+LTLIBOBJS =
+MAKEINFO = ${SHELL} /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = xprintidle
+PACKAGE = xqueryidle
 PACKAGE_BUGREPORT = henoch@dtek.chalmers.se
-PACKAGE_NAME = xprintidle
-PACKAGE_STRING = xprintidle 0.2
-PACKAGE_TARNAME = xprintidle
+PACKAGE_NAME = xqueryidle
+PACKAGE_STRING = xqueryidle 0.2
+PACKAGE_TARNAME = xqueryidle
 PACKAGE_VERSION = 0.2
 PATH_SEPARATOR = :
-SET_MAKE = 
+SET_MAKE =
 SHELL = /bin/bash
-STRIP = 
+STRIP =
 VERSION = 0.2
-XMKMF = 
-abs_builddir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2
-abs_srcdir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2
-abs_top_builddir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2
-abs_top_srcdir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2
+XMKMF =
+abs_builddir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2
+abs_srcdir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2
+abs_top_builddir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2
+abs_top_srcdir = /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
-am__quote = 
+am__quote =
 am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
 bindir = ${exec_prefix}/bin
-build_alias = 
+build_alias =
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host_alias = 
+host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = $(SHELL) /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xprintidle-0.2/install-sh
+install_sh = $(SHELL) /home/patrick/Dropbox/Mestrado/sbrc2012/coisas/xqueryidle-0.2/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -153,13 +153,13 @@ sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
-target_alias = 
-top_build_prefix = 
+target_alias =
+top_build_prefix =
 top_builddir = .
 top_srcdir = .
-x_includes = 
+x_includes =
 x_libraries = /usr/X11R6/lib
-xprintidle_SOURCES = xprintidle.c
+xqueryidle_SOURCES = xqueryidle.c
 AM_CPPFLAGS = -I
 LDADD = -L/usr/X11R6/lib -lX11 -lXss
 all: all-am
@@ -222,9 +222,9 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-xprintidle$(EXEEXT): $(xprintidle_OBJECTS) $(xprintidle_DEPENDENCIES) 
-	@rm -f xprintidle$(EXEEXT)
-	$(LINK) $(xprintidle_OBJECTS) $(xprintidle_LDADD) $(LIBS)
+xqueryidle$(EXEEXT): $(xqueryidle_OBJECTS) $(xqueryidle_DEPENDENCIES)
+	@rm -f xqueryidle$(EXEEXT)
+	$(LINK) $(xqueryidle_OBJECTS) $(xqueryidle_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -232,7 +232,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/xprintidle.Po
+include ./$(DEPDIR)/xqueryidle.Po
 
 .c.o:
 	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
