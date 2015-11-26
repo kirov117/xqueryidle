@@ -54,22 +54,22 @@ int main(int argc, char *argv[])
     usage(argv[0]);
     return 1;
   }
-  
+
   dpy = XOpenDisplay(NULL);
   if (dpy == NULL) {
     fprintf(stderr, "couldn't open display\n");
     return 1;
   }
-  
+
   struct sigaction act;
   memset (&act, '\0', sizeof(act));
- 
+
   /* Use the sa_sigaction field because the handles has two additional parameters */
   act.sa_sigaction = &signal_callback_handler;
-		 
+
   /* The SA_SIGINFO flag tells sigaction() to use the sa_sigaction field, not sa_handler. */
   act.sa_flags = SA_SIGINFO;
-			 
+
   // Register signal and signal handler
   if (sigaction(SIGTERM, &act, NULL) < 0) {
     perror ("sigaction");
@@ -78,13 +78,13 @@ int main(int argc, char *argv[])
 
   setlinebuf(stdout);
 
-  while(1) {
-	  
+  // while(1) {
+
     if (!XScreenSaverQueryExtension(dpy, &event_basep, &error_basep)) {
       fprintf(stderr, "screen saver extension not supported\n");
       return 1;
     }
-  
+
     if (!XScreenSaverQueryInfo(dpy, DefaultRootWindow(dpy), &ssi)) {
       fprintf(stderr, "couldn't query screen saver info\n");
       return 1;
@@ -92,8 +92,8 @@ int main(int argc, char *argv[])
 
     printf("%lu\t%lu\n", time(NULL), workaroundCreepyXServer(dpy, ssi.idle));
     sleep(1);
-  }
-  
+  // }
+
   return 0;
 }
 
@@ -120,8 +120,8 @@ void usage(char *name)
  * This result in SUSE bug # and sf.net bug #. The bug in the XServer itself
  * is reported at https://bugs.freedesktop.org/buglist.cgi?quicksearch=6439.
  *
- * Workaround: Check if if XServer is in a dpms state, check the 
- *             current timeout for this state and add this value to 
+ * Workaround: Check if if XServer is in a dpms state, check the
+ *             current timeout for this state and add this value to
  *             the current idle time and return.
  *
  * \param _idleTime a unsigned long value with the current idletime from
@@ -159,7 +159,7 @@ unsigned long workaroundCreepyXServer(Display *dpy, unsigned long _idleTime ){
             break;
         }
       }
-    } 
+    }
   }
 
   return _idleTime;
